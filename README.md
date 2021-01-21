@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# FurSquare
+[License](https://img.shields.io/badge/License-MIT-blue)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> <img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> <img src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
 
-## Available Scripts
+## Table of Contents
+  * [Description](#description)
+  * [Usage](#usage)
+  * [Technology](#technology)
+  * [Installation](#installation)
+  * [License](#license)
+  * [Images / Demo Video](#images-/-demo-video)
+  * [Contributing to This Repo](#contributing-to-this-repo)
+  * [Questions / Contact Details](#questions-/-contact-details)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+  ## Description
+This app is for pet owners and thier pets. It is intended to assist pet owners in locating services, connecting with other pet owners, and for all too imporant pet socialization (think dog parks and doggy daycares).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  ## Usage
+As a pet owner, I want to find the local dog park(s) and local businesses that offer services I need to care for my pet. I also want to be able to connect with other pet owners or search for a new doggy brother or sister to adopt in the future.
 
-### `npm test`
+Initial Landing Page
+<img src="wireframe1.jpg" />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+App portal
+<img src="wireframe2.jpg" />
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  ## Technology
+This app utilizes the following technologies:
+ - [MongoDB](https://www.mongodb.com/)
+ - [Express](https://www.npmjs.com/package/express)
+ - [ReactJS](https://reactjs.org/)
+ - [NodeJS](https://nodejs.org/)
+ - [socket.io](https://socket.io/) <em>(anticipated)</em>
+ - [Material UI](https://material-ui.com/) <em>(anticipated)</em> or [Bootstrap] (https://getbootstrap.com/)
+ - [Passport.js](http://www.passportjs.org/) and/or [bcrypt](https://www.npmjs.com/package/bcrypt)
+ - [MongoDB-Atlas](https://www.mongodb.com/cloud/atlas)
+ - [Heroku](https://www.heroku.com/) or [Netlfy](https://www.netlify.com/) <em>(anticipated)</em> for deployment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+  ## Installation
+Deployment link (to be inserted here)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  ## License
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Copyright (c) 2021; Brandt Fricker, Theresa Grier, Alan Huynh, and Alex Nieves.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-## Learn More
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+  ## Images / Demo Video
+  <!-- A video demonstration of this application can be found [here](https://youtu.be/8QQGD-kPY20).
+  Click the image to launch the video. -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  <!-- [![Screeshot](screenshot.jpg)](https://www.youtube.com/watch?v=8QQGD-kPY20 "Demo") -->
 
-### Analyzing the Bundle Size
+  TBA <br />
+<img src="screenshot.jpg" />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+  ## Contributing to This Repo
+  To contribute to this project, clone this project repository locally, create a new branch, and install all dependencies using 'npm install'. After modifying the code, verify all edits/changes are clearly commented and submit a push request which includes a summary of the edits. All contributions will be reviewed prior to incorporating them into the repo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+  ## Questions / Contact Details
+  This app can be found on my Github page at [TreeGee73](https://github.com/TreeGee73).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  If you have any questions or need to contact me about this app, I can reached either on Github or by email at [treegee73@gmail.com](treegee73@gmail.com).
