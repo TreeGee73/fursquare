@@ -1,14 +1,20 @@
 {
   "name": "fursquare",
   "version": "0.1.0",
-  "private": true,  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js"
-  },
-  "author": "",
+  "private": true,
+  "main": "server.js",
+  "author": "Brandt Fricker, Theresa Grier, Alan Huynh, and Alex Nieves",
   "license": "MIT",
   "dependencies": {
+    "@carbon/colors": "^10.18.0",
+    "@carbon/icons-react": "^10.23.0",
+    "@carbon/themes": "^10.25.0",
+    "carbon-components": "^10.26.0",
+    "carbon-components-react": "^7.26.0",
+    "node-sass": "^4.14.1",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/user-event": "^12.6.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "concurrently": "^4.0.1",
@@ -18,6 +24,41 @@
     "mongoose": "^5.3.11",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "validator": "^10.9.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1",
+    "styled-components": "^5.2.1",
+    "validator": "^13.5.2",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": 
+    "react-scripts start",
+    "server": "nodemon server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
