@@ -48,7 +48,7 @@ This app utilizes the following technologies:
 ---
 
   ## Installation
-Deployment link (to be inserted here)
+Deployment link: [https://youthful-goodall-6e7a27.netlify.app/](https://youthful-goodall-6e7a27.netlify.app/)
 
 ---
 
