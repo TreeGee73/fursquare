@@ -15,3 +15,6 @@ export const JobTitle = styled.p`
   font-weight: bold;
   display: inline-block;
 `;
+// export const WorkTitle = styled.h3`
+//   font-weight: bold;
+// `;
