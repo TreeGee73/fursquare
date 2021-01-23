@@ -1,6 +1,8 @@
+// Dependancies
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-// Create Schema
+
+// Create Users Schema
 const UserSchema = new Schema({
   name: {
     type: String,
@@ -19,5 +21,5 @@ const UserSchema = new Schema({
     default: Date.now
   }
 });
-// eslint-disable-next-line no-undef
+
 module.exports = User = mongoose.model("users", UserSchema);
