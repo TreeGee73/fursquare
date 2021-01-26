@@ -2,39 +2,144 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import { Link } from "react-router-dom";
 
 class Dashboard extends Component {
-  onLogoutClick = e => {
+  onLogoutClick = (e) => {
     e.preventDefault();
     this.props.logoutUser();
   };
 
   render() {
     const { user } = this.props.auth;
-return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-          <div className="col s12 center-align">
-            <h4>
-              <b>Hey there,</b> {user.name.split(" ")[0]}
-              <p className="flow-text grey-text text-darken-1">
-                You are logged into{" "}
-                <span style={{ fontFamily: "monospace" }}>FurSquare</span> 👏
+    return (
+      <div>
+        <div>
+          <nav
+            href="#navbar"
+            className="js-colorlib-nav-toggle colorlib-nav-toggle"
+            data-toggle="collapse"
+            data-target="#navbar"
+            // aria-expanded="false"
+            // aria-controls="navbar"
+          >
+            <i />
+          </nav>
+          <aside id="colorlib-aside" className="border js-fullheight">
+            <div className="text-center">
+              <div
+                className="author-img"
+                style={{ backgroundImage: "url(images/about.jpg)" }}
+              />
+              <h1 id="colorlib-logo">
+                <Link
+                  to="/"
+                  style={{
+                    fontFamily: "monospace",
+                  }}
+                  className="col s5 brand-logo center black-text"
+                >
+                  FurSquare
+                </Link>
+              </h1>
+              <span className="email">
+                <i className="icon-mail"></i> hellofursquare@gmail.com
+              </span>
+              <h4 class="h4-sidebar">
+                <b>Hey there,</b> {user.name.split(" ")[0]}!
+                <p className="flow-text grey-text text-darken-1 p-sidebar">
+                  You are logged into{" "}
+                  <span style={{ fontFamily: "monospace" }}>FurSquare</span>!
+                </p>
+              </h4>
+            </div>
+            <nav id="colorlib-main-menu" role="navigation" className="navbar">
+              <div id="navbar" className="collapse">
+                <ul>
+                  <li className="active">
+                    <a href="#home" data-nav-section="home">
+                      Introduction
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#profile" data-nav-section="profile">
+                      Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#pets" data-nav-section="pets">
+                      Your Pets
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#services" data-nav-section="services">
+                      Search Services
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#connect" data-nav-section="connect">
+                      Connect with Other Pet People
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#adopt" data-nav-section="adopt">
+                      Add a fur baby to your family
+                    </a>
+                  </li>
+                  <li>
+                    <button
+                      className="btn btn-large btn-sidebar"
+                      onClick={this.onLogoutClick}
+                    >
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <nav id="colorlib-main-menu">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.facebook.com/FurSquare-104546528312924"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="icon-social-facebook" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/SquareFur"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="icon-social-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/hellofursquare/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="icon-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div className="colorlib-footer">
+              <p>
+                <small>
+                  Made with <i className="icon-heart" aria-hidden="true" /> and{" "}
+                  <i className="icon-coffee" aria-hidden="true"></i>
+                </small>
               </p>
-            </h4>
-            <button
-              style={{
-                width: "150px",
-                borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem"
-              }}
-              onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-            >
-              Logout
-            </button>
-          </div>
+              <p>
+                <small>&copy;2021 FurSquare</small>
+              </p>
+            </div>
+          </aside>
         </div>
       </div>
     );
@@ -43,16 +148,13 @@ return (
 
 Dashboard.propTypes = {
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
-    return ({
-        auth: state.auth
-    });
+  return {
+    auth: state.auth,
+  };
 }
 
-export default connect(
-  mapStateToProps,
-  { logoutUser }
-)(Dashboard);
+export default connect(mapStateToProps, { logoutUser })(Dashboard);
