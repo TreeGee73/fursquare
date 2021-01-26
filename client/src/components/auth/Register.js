@@ -79,8 +79,11 @@ class Register extends Component {
                   FurSquare
                 </Link>
               </h1>
-            <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to
+              <span className="email">
+                <i className="icon-mail"></i> hellofursquare@gmail.com
+              </span><br/>
+            <Link to="/" className="btn btn-home">
+              <i className="icon-arrow-left-thick"></i> Back to
               home
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
@@ -157,7 +160,7 @@ class Register extends Component {
                     marginTop: "1rem",
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-large btn-sidebar"
                 >
                   Sign up
                 </button>
