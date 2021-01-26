@@ -1,21 +1,21 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
-class Search extends Component {
+// class Search extends Component {
 
-    state = {};
+//     state = {};
 
-    render() {
+//     render() {
 
-        return (
+//         return (
 
-            <div>
-                <h1>Welcome to FurSearch!</h1>;
-                <input name="text" type="text" placeholder="Search" />
-                <button>Search</button>
-            </div>
+//             <div>
+//                 <h1>Welcome to FurSearch!</h1>;
+//                 <input name="text" type="text" placeholder="Search" />
+//                 <button>Search</button>
+//             </div>
 
-        );
-    }
-}
+//         );
+//     }
+// }
 
-export default Search;
+// export default Search;
