@@ -70,6 +70,7 @@ h6 {
   font-weight: 400;
   margin: 0 0 30px 0;
 }
+
 .h1-sidebar,
 .h2-sidebar,
 .h3-sidebar,
@@ -87,7 +88,6 @@ h6 {
   padding-top: 1rem;
 }
 
-
 .btn-sidebar{
   color: #ffffff !important;
   background-color: #284664 !important;
@@ -98,6 +98,15 @@ h6 {
   margin-top: 1rem;
 }
 
+.btn-sidebar :hover{
+  color: #ffffff !important;
+  background-color:rgba(40, 70, 100, 0.7) !important;
+  font-family: "Playfair Display", Georgia, serif;
+  width: "150px";
+  border-radius: 3px;
+  letter-spacing: 1.5px;
+  margin-top: 1rem;
+}
 
 figure {
   margin-bottom: 2.5em;
