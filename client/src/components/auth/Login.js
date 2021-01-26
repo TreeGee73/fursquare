@@ -80,7 +80,7 @@ class Login extends Component {
               </h1>
               <span className="email">
                 <i className="icon-mail"></i> hellofursquare@gmail.com
-              </span>
+              </span><br/>
             <Link to="/" className="btn-flat waves-effect">
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
@@ -137,7 +137,7 @@ class Login extends Component {
                     marginTop: "1rem",
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-large btn-sidebar"
                 >
                   Login
                 </button>
