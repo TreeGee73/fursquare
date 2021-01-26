@@ -50,9 +50,35 @@ class Register extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col s8 offset-s2">
+      <div>
+        <div>
+          <nav
+            href="#navbar"
+            className="js-colorlib-nav-toggle colorlib-nav-toggle"
+            data-toggle="collapse"
+            data-target="#navbar"
+            // aria-expanded="false"
+            // aria-controls="navbar"
+          >
+            <i />
+          </nav>
+          <aside id="colorlib-aside" className="border js-fullheight">
+            <div className="text-center">
+              <div
+                className="author-img"
+                style={{ backgroundImage: "url(images/about.jpg)" }}
+              />
+              <h1 id="colorlib-logo">
+                <Link
+                  to="/"
+                  style={{
+                    fontFamily: "monospace",
+                  }}
+                  className="col s5 brand-logo center black-text"
+                >
+                  FurSquare
+                </Link>
+              </h1>
             <Link to="/" className="btn-flat waves-effect">
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
@@ -137,7 +163,50 @@ class Register extends Component {
                 </button>
               </div>
             </form>
-          </div>
+            <nav id="colorlib-main-menu">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.facebook.com/FurSquare-104546528312924"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="icon-social-facebook" />
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/SquareFur"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="icon-social-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/hellofursquare/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="icon-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div className="colorlib-footer">
+              <p>
+                <small>
+                  Made with <i className="icon-heart" aria-hidden="true" /> and{" "}
+                  <i className="icon-coffee" aria-hidden="true"></i>
+                </small>
+              </p>
+              <p>
+                <small>&copy;2021 FurSquare</small>
+                </p>
+                </div>
+            </div>
+          </aside>
         </div>
       </div>
     );
