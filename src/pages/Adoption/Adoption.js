@@ -6,7 +6,7 @@ const Adoption = ({user}) => {
     return (
         <Layout user={user}>
       <div >
-        <PetsHeader  >Adopt Me</PetsHeader>
+        <PetsHeader>Adopt Me</PetsHeader>
         <ul style={{
                   // fontStyle: "oblique",
                   backgroundColor: "rgba( 0, 0, 0, 0.5)",

@@ -17,6 +17,17 @@ class Navbar extends Component {
               <i className="material-icons">pets</i>
               FurSquare
             </Link>
+            <br></br>
+            <Link
+              to="/profile"
+              style={{
+                fontFamily: "monospace",
+              }}
+              className="col s5 brand-logo center black-text"
+            >
+              <i className="material-icons">pets</i>
+              profile
+            </Link>
           </div>
         </nav>
       </div>
