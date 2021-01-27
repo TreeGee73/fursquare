@@ -19,11 +19,12 @@ class Search extends Component {
     var searchUrl = `https://www.googleapis.com/customsearch/v1?key=AIzaSyDjA6PJZpa-H7l3BevZHUGl8sMBUxGrP7M&cx=3142a4046227fd8fe&q=${searchInput}`;
     fetch(searchUrl)
       .then(response => {
-          console.log(response.json())
-        // return response.json();
+        //   console.log(response.json())
+        return response.json();
       })
       .then(jsonData => {
-        this.setState({ info: jsonData.info });
+        // this.setState({ info: jsonData.info });
+        console.log(jsonData)
       });
   };
 
@@ -49,7 +50,7 @@ class Search extends Component {
             ))}
           </div>
         ) : (
-          <p>Try searching for a meal</p>
+          <p>Try a better Search</p>
         )}
       </div>
     );
