@@ -12,21 +12,22 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
-import Introduction from "./components/layout/introduction";
+import Introduction from "./components/layout/Introduction";
 import Services from './components/layout/services';
+import Pets from './components/layout/pets';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
   // Set auth token header auth
   const token = localStorage.jwtToken;
   setAuthToken(token);
-  
+
   // Decode token and get user info and exp
   const decoded = jwt_decode(token);
-  
+
   // Set user and isAuthenticated
   store.dispatch(setCurrentUser(decoded));
-  
+
   // Check for expired token
   const currentTime = Date.now() / 1000; // to get in milliseconds
   if (decoded.exp < currentTime) {
@@ -43,17 +44,20 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/register" component={Register} />
-            <Route exact path="/login" component={Login} />
-            
-            <Switch>
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
-            
-            </Switch>
-            <div id="colorlib-main">
-              <Introduction></Introduction>
-              <Services></Services>
+            <div id="colorlib-page">
+              <div id="container-wrap">
+                <Route exact path="/" component={Landing} />
+                <Route exact path="/register" component={Register} />
+                <Route exact path="/login" component={Login} />
+                <Switch>
+                  <PrivateRoute exact path="/dashboard" component={Dashboard} />
+                </Switch>
+                <div id="colorlib-main">
+                  <Introduction></Introduction>
+                  <Services></Services>
+                  <Pets></Pets>
+                </div>
+              </div>
             </div>
           </div>
         </Router>
