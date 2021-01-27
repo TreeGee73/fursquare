@@ -20,8 +20,6 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 require("./config/passport")(passport);
 app.use("/api/users", users);
-// set ejs as templating engine
-app.set("view engine", "ejs");
 
 // set up multer for storing uploaded files
 var multer = require('multer');
@@ -36,7 +34,7 @@ var storage = multer.diskStorage({
 });
 
 var upload = multer({ storage: storage });
-var imgModel = require('./models/model');
+
 // DB Config
 const db = require("./config/keys").mongoURI;
 
@@ -46,38 +44,7 @@ mongoose
   .then(() => console.log("MongoDB successfully connected"))
   .catch((err) => console.log(err));
 
-// Start the server and begin listening for client requests.
-app.get('/', (req, res) => {
-  imgModel.find({}, (err, items) => {
-    if (err) {
-      console.log(err);
-      res.status(500).send('An error occurred', err);
-    }
-    else {
-      res.render('imagesPage', { items: items });
-    }
-  });
-});
-app.post('/', upload.single('image'), (req, res, next) => {
-  
-  var obj = {
-    name: req.body.name,
-    desc: req.body.desc,
-    img: {
-      data: fs.readFileSync(path.join(__dirname + '/uploads/' + req.file.filename)),
-      contentType: 'image/png'
-    }
-  }
-  imgModel.create(obj, (err, item) => {
-    if (err) {
-      console.log(err);
-    }
-    else {
-      // item.save();
-      res.redirect('/');
-    }
-  });
-});
+
 
 app.listen(port, () =>
   // Server log to indicate the server has started
