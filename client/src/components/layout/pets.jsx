@@ -5,7 +5,7 @@ export default class Pets extends Component {
   render() {
     return (
       <div>
-        
+        <h1>I am Pets</h1>
       </div>
     );
   }
