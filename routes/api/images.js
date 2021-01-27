@@ -42,6 +42,9 @@ function uploadToS3(req, res) {
 router.post("/upload", function (req, res) {
   uploadToS3(req, res)
     .then((downloadUrl) => {
+      const { location } = req.file;
+      // the location variable above stores the url for the uploaded image
+      // You will need to take the location an store this in your Database.
       //     db.update({
       //         TableName: "users",
       //     id: userId,
