@@ -72,9 +72,9 @@ class Dashboard extends Component {
                     </a>
                   </li>
                   <li>
-                    <a href="#services" data-nav-section="services">
+                    <Link to="/services" data-nav-section="services">
                       Search Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a href="#connect" data-nav-section="connect">

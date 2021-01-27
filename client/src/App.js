@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
@@ -13,8 +14,8 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Introduction from "./components/layout/Introduction";
-import Services from './components/layout/services';
-import Pets from './components/layout/pets';
+import Services from "./components/layout/Services";
+import Pets from "./components/layout/Pets";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -52,11 +53,14 @@ class App extends Component {
                 <Switch>
                   <PrivateRoute exact path="/dashboard" component={Dashboard} />
                 </Switch>
-                <div id="colorlib-main">
+              </div>
+              <div id="colorlib-main">
+                <Switch>
                   <Introduction></Introduction>
-                  <Services></Services>
-                  <Pets></Pets>
-                </div>
+                  <Route path="/introduction" component={Introduction} />
+                  <Route path="/services" component={Services} />
+                  <Route path="/pets" component={Pets} />
+                </Switch>
               </div>
             </div>
           </div>

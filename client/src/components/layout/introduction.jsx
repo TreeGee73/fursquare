@@ -15,7 +15,6 @@ export default class Introduction extends Component {
                       <div className="slider-text-inner js-fullheight">
                         <div className="desc">
                           <h1>Welcome to <br />FurSquare!</h1>
-                          {/* <p><a className="btn btn-primary btn-learn" href="index.html#about" data-nav-section="about" rel="noopener noreferrer">About Me <i className="icon-user2" /></a></p> */}
                         </div>
                       </div>
                     </div>
@@ -30,7 +29,6 @@ export default class Introduction extends Component {
                       <div className="slider-text-inner">
                         <div className="desc">
                           <h1 class="h1-home">A site for<br/>pet owners<br/>and their pets...</h1>
-                          {/* <p><a className="btn btn-primary btn-learn" href="https://github.com/TreeGee73?tab=repositoriesa" target="_blank" rel="noopener noreferrer">View Projects <i className="icon-briefcase3" /></a></p> */}
                         </div>
                       </div>
                     </div>
@@ -45,7 +43,6 @@ export default class Introduction extends Component {
                       <div className="slider-text-inner">
                         <div className="desc">
                           <h1>To find services<br/>and connect<br/>with other pet owners.</h1>
-                          {/* <p><a className="btn btn-primary btn-learn" href="mailto:treegee73@gmail.com" >Email Me<i className="icon-mail" /></a></p> */}
                         </div>
                       </div>
                     </div>
