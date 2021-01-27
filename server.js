@@ -1,13 +1,12 @@
 // Dependancies
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 // for images
-var fs = require('fs');
-var path = require('path');
-require('dotenv/config');
-
+var fs = require("fs");
+var path = require("path");
 
 const users = require("./routes/api/users");
 
@@ -22,15 +21,15 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 
 // set up multer for storing uploaded files
-var multer = require('multer');
+var multer = require("multer");
 
 var storage = multer.diskStorage({
-	destination: (req, file, cb) => {
-		cb(null, 'uploads')
-	},
-	filename: (req, file, cb) => {
-		cb(null, file.fieldname + '-' + Date.now())
-	}
+  destination: (req, file, cb) => {
+    cb(null, "uploads");
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.fieldname + "-" + Date.now());
+  },
 });
 
 var upload = multer({ storage: storage });
@@ -43,8 +42,6 @@ mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB successfully connected"))
   .catch((err) => console.log(err));
-
-
 
 app.listen(port, () =>
   // Server log to indicate the server has started
