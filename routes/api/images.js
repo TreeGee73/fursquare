@@ -2,7 +2,7 @@ const aws = require("aws-sdk");
 const router = require("express").Router();
 const multer = require("multer");
 const multerS3 = require("multer-s3");
-const uuid = require("uuid");
+const { v4: uuid } = require("uuid");
 
 const { AWS_SECRET, AWS_ACCESS_KEY, AWS_REGION } = process.env;
 
@@ -16,12 +16,13 @@ const s3 = new aws.S3();
 const upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: "furrsquare",
+    bucket: "furrrsquare",
     metadata: function (req, file, cb) {
       cb(null, { fieldName: file.fieldname });
     },
-    key: function (req, file, cb) {
-      cb(null, req.s3key);
+    key: function (req, { originalname }, cb) {
+      const extension = originalname.split(".").pop();
+      cb(null, `${req.s3key}.${extension}`);
     },
   }),
 });
@@ -29,8 +30,7 @@ const singleFileUpload = upload.single("image");
 
 function uploadToS3(req, res) {
   req.s3key = uuid();
-  let downloadUrl =
-    "http://s3-${config.awsConfig.region}.amazonaws.com/furrsquare/${req.s3key}";
+  let downloadUrl = `http://s3-${AWS_REGION}.amazonaws.com/furrrsquare/${req.s3key}`;
   return new Promise((resolve, reject) => {
     return singleFileUpload(req, res, (err) => {
       if (err) return reject(err);

@@ -9,6 +9,7 @@ var fs = require("fs");
 var path = require("path");
 
 const users = require("./routes/api/users");
+const images = require("./routes/api/images");
 
 const port = process.env.PORT || 5000;
 const app = express();
@@ -18,7 +19,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(passport.initialize());
 require("./config/passport")(passport);
+
+
 app.use("/api/users", users);
+app.use("/api/images", images);
 
 // set up multer for storing uploaded files
 var multer = require("multer");

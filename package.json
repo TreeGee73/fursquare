@@ -35,7 +35,6 @@
     "multer-s3": "^2.9.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
-    "react-images-upload": "^1.2.8",
     "uuid": "^8.3.2",
     "validator": "^13.5.2"
   },
