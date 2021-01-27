@@ -13,8 +13,7 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Introduction from "./components/layout/introduction";
-import Profile from "./components/layout/profile";
-import Pets from "./components/layout/pets";
+import Services from './components/layout/services';
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -47,14 +46,14 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            
             <Switch>
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
-              <PrivateRoute exact path="/Profile" component={Profile} />
+            
             </Switch>
             <div id="colorlib-main">
               <Introduction></Introduction>
-              <PrivateRoute exact path="/profile"  componet={Profile} />
-              <PrivateRoute exact path="/pets"  componet={Pets} />
+              <Services></Services>
             </div>
           </div>
         </Router>
