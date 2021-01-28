@@ -1,4 +1,5 @@
 // Dependancies
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -17,7 +18,7 @@ require("./config/passport")(passport);
 app.use("/api/users", users);
 
 // DB Config
-const db = require("./config/keys").mongoURI;
+const db = process.env.MONGODB_URI;
 
 // Connect to MongoDB
 mongoose
