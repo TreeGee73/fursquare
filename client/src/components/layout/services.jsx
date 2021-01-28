@@ -9,8 +9,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 
-  
-
 class Search extends Component {
     
   state = {
@@ -27,7 +25,7 @@ class Search extends Component {
   };
 
   makeApiCall = searchInput => {
-    var searchUrl = `https://www.googleapis.com/customsearch/v1?key=AIzaSyDjA6PJZpa-H7l3BevZHUGl8sMBUxGrP7M&cx=3142a4046227fd8fe&q=${searchInput}`;
+    var searchUrl = `https://www.googleapis.com/customsearch/v1?key=AIzaSyBKw9foGUzpMEVS0VV_tBxCbkWs1PxQyQk&cx=3142a4046227fd8fe&q=${searchInput}`;
     fetch(searchUrl)
       .then(response => {
         
@@ -39,21 +37,10 @@ class Search extends Component {
             searchValue: ""})
            console.log(jsonData)
             console.log(jsonData.items[0])
-
-
-           
-        
         
       });
       
-      
       }
-
-
-
-
- 
-
 
   render() {
     return (
@@ -72,14 +59,14 @@ class Search extends Component {
             {this.state.items.map((item, index) => (
               <div class="single-meal" key={index}>
                 
-                <Card style={{height: "140px", maxWidth: "345px" ,border: "1px solid", marginTop: "10px", marginBottom: "10px", display: "block", marginLeft: "auto", marginRight: "auto"}}>
+                <Card style={{height: "140px", maxWidth: "345px" ,border: "1px solid", marginTop: "10px", marginBottom: "10px", display: "block"}}>
       <CardActionArea>
         <CardContent>
-        <CardMedia
+        {/* <CardMedia
           src=""
           image=""
           title="Contemplative Reptile"
-        />
+        /> */}
           <Typography gutterBottom variant="h5" component="h2">
             {item.displayLink}
           </Typography>
@@ -98,7 +85,7 @@ class Search extends Component {
             ))}
           </div>
         ) : (
-          <p>Try searching for a meal</p>
+          <p>You need help! This search is powered by Google</p>
         )}
          
       </div>
