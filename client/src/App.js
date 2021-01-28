@@ -46,22 +46,35 @@ class App extends Component {
         <Router>
           <div className="App">
             <div id="colorlib-page">
+
+
+
               <div id="container-wrap">
                 <Route exact path="/" component={Landing} />
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/login" component={Login} />
-                <Switch>
-                  <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                </Switch>
+                
+                <PrivateRoute path="/dashboard" component={Dashboard} />
+                
               </div>
-              <div id="colorlib-main">
-                <Switch>
-                  <Introduction></Introduction>
-                  <Route path="/introduction" component={Introduction} />
-                  <Route path="/services" component={Services} />
-                  <Route path="/pets" component={Pets} />
-                </Switch>
-              </div>
+
+
+
+          {/* </Router> */}
+              {/* <Router> */}
+              
+
+
+            <div id="colorlib-main">
+              {/* <Introduction></Introduction>
+                  <Pets></Pets>
+                  <Services></Services> */}
+           <Switch>
+                <PrivateRoute path="/dashboard/services" component={Services} />
+                <PrivateRoute path="/dashboard/pets" component={Pets} />
+                <Route component={Introduction} />
+           </Switch>
+            </div>
             </div>
           </div>
         </Router>

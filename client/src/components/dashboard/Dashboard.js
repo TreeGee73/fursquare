@@ -56,36 +56,31 @@ class Dashboard extends Component {
             <nav id="colorlib-main-menu" role="navigation" className="navbar">
               <div id="navbar" className="collapse">
                 <ul>
-                  <li className="active">
-                    <a href="#home" data-nav-section="home">
-                      Introduction
-                    </a>
-                  </li>
-                  <li>
+                  {/* <li>
                     <a href="#profile" data-nav-section="profile">
                       Profile
                     </a>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="#pets" data-nav-section="pets">
+                  <Link to="/dashboard/pets" data-nav-section="pets">
                       Your Pets
-                    </a>
-                  </li>
-                  <li>
-                    <Link to="/services" data-nav-section="services">
-                      Search Services
                     </Link>
                   </li>
                   <li>
+                    <Link to="/dashboard/services" data-nav-section="services">
+                      Search Services
+                    </Link>
+                  </li>
+                  {/* <li>
                     <a href="#connect" data-nav-section="connect">
                       Connect with Other Pet People
                     </a>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <a href="#adopt" data-nav-section="adopt">
                       Add a fur baby to your family
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <button
                       className="btn btn-large btn-sidebar"

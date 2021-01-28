@@ -80,111 +80,111 @@ class Login extends Component {
               </h1>
               <span className="email">
                 <i className="icon-mail"></i> hellofursquare@gmail.com
-              </span><br/>
-            <Link to="/" className="btn-flat waves-effect">
-              <i className="material-icons left">keyboard_backspace</i> Back to
-              home
-            </Link>
-            <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
-                <b>Login</b> below
-              </h4>
-              <p className="grey-text text-darken-1">
-                Don't have an account? <Link to="/register">Register</Link>
-              </p>
-            </div>
-            <form noValidate onSubmit={this.onSubmit}>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.email}
-                  error={errors.email}
-                  id="email"
-                  type="email"
-                  className={classnames("", {
-                    invalid: errors.email || errors.emailnotfound,
-                  })}
-                />
-                <label htmlFor="email">Email</label>
-                <span className="red-text">
-                  {errors.email}
-                  {errors.emailnotfound}
-                </span>
-              </div>
-              <div className="input-field col s12">
-                <input
-                  onChange={this.onChange}
-                  value={this.state.password}
-                  error={errors.password}
-                  id="password"
-                  type="password"
-                  className={classnames("", {
-                    invalid: errors.password || errors.passwordincorrect,
-                  })}
-                />
-                <label htmlFor="password">Password</label>
-                <span className="red-text">
-                  {errors.password}
-                  {errors.passwordincorrect}
-                </span>
-              </div>
+              </span>
+              <br />
+              <Link to="/" className="btn btn-home">
+                <i className="icon-arrow-left-thick"></i> Back to home
+              </Link>
               <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-                <button
-                  style={{
-                    width: "150px",
-                    borderRadius: "3px",
-                    letterSpacing: "1.5px",
-                    marginTop: "1rem",
-                  }}
-                  type="submit"
-                  className="btn btn-large btn-sidebar"
-                >
-                  Login
-                </button>
-              </div>
-            </form>
-            <nav id="colorlib-main-menu">
-              <ul>
-                <li>
-                  <a
-                    href="https://www.facebook.com/FurSquare-104546528312924"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="icon-social-facebook" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/SquareFur"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="icon-social-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/hellofursquare/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="icon-instagram"></i>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <div className="colorlib-footer">
-              <p>
-                <small>
-                  Made with <i className="icon-heart" aria-hidden="true" /> and{" "}
-                  <i className="icon-coffee" aria-hidden="true"></i>
-                </small>
-              </p>
-              <p>
-                <small>&copy;2021 FurSquare</small>
+                <h4>
+                  <b>Login</b> below
+                </h4>
+                <p className="grey-text text-darken-1">
+                  Don't have an account? <Link to="/register">Register</Link>
                 </p>
+              </div>
+              <form noValidate onSubmit={this.onSubmit}>
+                <div className="input-field col s12">
+                  <input
+                    onChange={this.onChange}
+                    value={this.state.email}
+                    error={errors.email}
+                    id="email"
+                    type="email"
+                    className={classnames("", {
+                      invalid: errors.email || errors.emailnotfound,
+                    })}
+                  />
+                  <label htmlFor="email">Email</label>
+                  <span className="red-text">
+                    {errors.email}
+                    {errors.emailnotfound}
+                  </span>
                 </div>
+                <div className="input-field col s12">
+                  <input
+                    onChange={this.onChange}
+                    value={this.state.password}
+                    error={errors.password}
+                    id="password"
+                    type="password"
+                    className={classnames("", {
+                      invalid: errors.password || errors.passwordincorrect,
+                    })}
+                  />
+                  <label htmlFor="password">Password</label>
+                  <span className="red-text">
+                    {errors.password}
+                    {errors.passwordincorrect}
+                  </span>
+                </div>
+                <div className="col s12" style={{ paddingLeft: "11.250px" }}>
+                  <button
+                    style={{
+                      width: "150px",
+                      borderRadius: "3px",
+                      letterSpacing: "1.5px",
+                      marginTop: "1rem",
+                    }}
+                    type="submit"
+                    className="btn btn-large btn-sidebar"
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
+              <nav id="colorlib-main-menu">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/FurSquare-104546528312924"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="icon-social-facebook" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://twitter.com/SquareFur"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="icon-social-twitter"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/hellofursquare/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="icon-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <div className="colorlib-footer">
+                <p>
+                  <small>
+                    Made with <i className="icon-heart" aria-hidden="true" />{" "}
+                    and <i className="icon-coffee" aria-hidden="true"></i>
+                  </small>
+                </p>
+                <p>
+                  <small>&copy;2021 FurSquare</small>
+                </p>
+              </div>
             </div>
           </aside>
         </div>
