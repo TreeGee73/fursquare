@@ -35,7 +35,7 @@ class Search extends Component {
             items: jsonData.items, 
             searchValue: ""})
            console.log(jsonData)
-            console.log(jsonData.items)
+            console.log(jsonData.items[0].pagemap.cse_image[0].src)
       });
     
       }
@@ -43,7 +43,7 @@ class Search extends Component {
   render() {
     var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
     return (
-      <div id="main">
+      <div id="main" >
         <h1>Top Hit Service</h1>
         <input
           name="text"
@@ -60,12 +60,10 @@ class Search extends Component {
                 
                 <Card style={{height: "140px", maxWidth: "345px" ,border: `1px solid ${randomColor}`, marginTop: "10px", marginBottom: "10px"}}>
       <CardActionArea>
-        <CardContent>
-        {/* <CardMedia
-          src=""
-          image=""
-          title="Contemplative Reptile"
-        /> */}
+        <CardContent >
+       
+           
+       
           <Typography gutterBottom variant="h5" component="h2">
             {item.displayLink}
           </Typography>
