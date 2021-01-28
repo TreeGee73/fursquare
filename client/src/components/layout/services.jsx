@@ -71,16 +71,20 @@ class Search extends Component {
           <div id="items-container">
             {this.state.items.map((item, index) => (
               <div class="single-meal" key={index}>
-                {/* <h2>{item.displayLink}</h2> */}
-                <Card>
+                
+                <Card style={{height: "140px", maxWidth: "345px" ,border: "1px solid", marginTop: "10px", marginBottom: "10px", display: "block", marginLeft: "auto", marginRight: "auto"}}>
       <CardActionArea>
         <CardContent>
+        <CardMedia
+          src=""
+          image=""
+          title="Contemplative Reptile"
+        />
           <Typography gutterBottom variant="h5" component="h2">
             {item.displayLink}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {item.title}
           </Typography>
         </CardContent>
       </CardActionArea>
