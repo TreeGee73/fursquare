@@ -45,7 +45,7 @@ class Dashboard extends Component {
               <span className="email">
                 <i className="icon-mail"></i> hellofursquare@gmail.com
               </span>
-              <h4 class="h4-sidebar">
+              <h4 className="h4-sidebar">
                 <b>Hey there,</b> {user.name.split(" ")[0]}!
                 <p className="flow-text grey-text text-darken-1 p-sidebar">
                   You are logged into{" "}
