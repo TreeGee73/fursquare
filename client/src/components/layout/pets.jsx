@@ -38,7 +38,7 @@ export default function Pets() {
         </Grid>
 
         <Grid item xs>
-          <Paper className={classes.paper} style={{ border: '1px solid'}}><img src="../images/dog1.jpg"/></Paper>
+          <Paper className={classes.paper} style={{ border: '1px solid'}}><img src="../images/dog6.jpg"/></Paper>
         </Grid>
       </Grid>
       {/* <Grid container spacing={3}>
