@@ -8,13 +8,12 @@ import Typography from '@material-ui/core/Typography';
 
 
 class Search extends Component {
-    
   state = {
     searchValue: "",
-    items: []
+    items: [],
   };
 
-  handleOnChange = event => {
+  handleOnChange = (event) => {
     this.setState({ searchValue: event.target.value });
   };
 
@@ -25,8 +24,7 @@ class Search extends Component {
   makeApiCall = searchInput => {
     var searchUrl = `https://www.googleapis.com/customsearch/v1?key=AIzaSyBKw9foGUzpMEVS0VV_tBxCbkWs1PxQyQk&cx=3142a4046227fd8fe&q=${searchInput}`;
     fetch(searchUrl)
-      .then(response => {
-        
+      .then((response) => {
         return response.json();
       })
       .then(jsonData => {
@@ -49,7 +47,7 @@ class Search extends Component {
           name="text"
           type="text"
           placeholder="Search for Service"
-          onChange={event => this.handleOnChange(event)}
+          onChange={(event) => this.handleOnChange(event)}
           value={this.state.searchValue}
         />
         <button onClick={this.handleSearch}>Enter</button>

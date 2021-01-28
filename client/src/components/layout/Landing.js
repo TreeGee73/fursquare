@@ -36,7 +36,7 @@ class Landing extends Component {
               <span className="email">
                 <i className="icon-mail"></i> hellofursquare@gmail.com
               </span>
-              <h4 class="h4-sidebar">
+              <h4 className="h4-sidebar">
                 <b>
                   Welcome to{" "}
                   <span style={{ fontFamily: "monospace" }}>FurSquare</span>!
