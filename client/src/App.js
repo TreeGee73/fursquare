@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
@@ -13,8 +14,8 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Introduction from "./components/layout/Introduction";
-import Services from './components/layout/services';
-import Pets from './components/layout/pets';
+import Services from "./components/layout/Services";
+import Pets from "./components/layout/Pets";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -45,19 +46,35 @@ class App extends Component {
         <Router>
           <div className="App">
             <div id="colorlib-page">
+
+
+
               <div id="container-wrap">
                 <Route exact path="/" component={Landing} />
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/login" component={Login} />
-                <Switch>
-                  <PrivateRoute exact path="/dashboard" component={Dashboard} />
-                </Switch>
-                <div id="colorlib-main">
-                  <Introduction></Introduction>
-                  <Services></Services>
-                  <Pets></Pets>
-                </div>
+                
+                <PrivateRoute path="/dashboard" component={Dashboard} />
+                
               </div>
+
+
+
+          {/* </Router> */}
+              {/* <Router> */}
+              
+
+
+            <div id="colorlib-main">
+              {/* <Introduction></Introduction>
+                  <Pets></Pets>
+                  <Services></Services> */}
+           <Switch>
+                <PrivateRoute path="/dashboard/services" component={Services} />
+                <PrivateRoute path="/dashboard/pets" component={Pets} />
+                <Route component={Introduction} />
+           </Switch>
+            </div>
             </div>
           </div>
         </Router>

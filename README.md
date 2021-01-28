@@ -25,10 +25,28 @@ This app is for pet owners and thier pets. It is intended to assist pet owners i
 As a pet owner, I want to find the local dog park(s) and local businesses that offer services I need to care for my pet. I also want to be able to connect with other pet owners or search for a new doggy brother or sister to adopt in the future.
 
 Initial Landing Page
-<img src="wireframe1.jpg" />
-
-App portal
-<img src="wireframe2.jpg" />
+<br />
+<img src="client\public\images\wireframe1.jpg" />
+<br />
+<br />
+Login Portal
+<br />
+<img src="client\public\images\wireframe2.jpg" />
+<br />
+<br />
+Register Portal
+<br />
+<img src="client\public\images\wireframe3.jpg" />
+<br />
+<br />
+Pet Pictures
+<br />
+<img src="client\public\images\wireframe4.jpg" />
+<br />
+<br />
+Search Page
+<br />
+<img src="client\public\images\wireframe5.jpg" />
 
 ---
 
@@ -72,7 +90,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   <!-- [![Screeshot](screenshot.jpg)](https://www.youtube.com/watch?v=8QQGD-kPY20 "Demo") -->
 
   TBA <br />
-<img src="screenshot.jpg" />
+<img src="client\public\images\screenshot.jpg" />
 
 ---
 
