@@ -6,6 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+const { REACT_APP_GOOGLE_API_KEY, REACT_APP_GOOGLE_CX } = process.env;
 
 class Search extends Component {
   state = {
@@ -22,7 +23,7 @@ class Search extends Component {
   };
 
   makeApiCall = searchInput => {
-    var searchUrl = `https://www.googleapis.com/customsearch/v1?key=AIzaSyBKw9foGUzpMEVS0VV_tBxCbkWs1PxQyQk&cx=3142a4046227fd8fe&q=${searchInput}`;
+    var searchUrl = "https://www.googleapis.com/customsearch/v1?key=" + REACT_APP_GOOGLE_API_KEY + "&cx=" + REACT_APP_GOOGLE_CX + "=" + searchInput;
     fetch(searchUrl)
       .then((response) => {
         return response.json();
