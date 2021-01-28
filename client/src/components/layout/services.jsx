@@ -41,6 +41,7 @@ class Search extends Component {
       }
 
   render() {
+    var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
     return (
       <div id="main">
         <h1>Top Hit Service</h1>
@@ -57,7 +58,7 @@ class Search extends Component {
             {this.state.items.map((item, index) => (
               <div class="single-meal" key={index}>
                 
-                <Card style={{height: "140px", maxWidth: "345px" ,border: "1px solid", marginTop: "10px", marginBottom: "10px"}}>
+                <Card style={{height: "140px", maxWidth: "345px" ,border: `1px solid ${randomColor}`, marginTop: "10px", marginBottom: "10px"}}>
       <CardActionArea>
         <CardContent>
         {/* <CardMedia
