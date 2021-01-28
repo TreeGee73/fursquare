@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-// import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
@@ -44,8 +42,8 @@ class Search extends Component {
 
   render() {
     return (
-      <div id="main">
-        <h1>Top Hit Service</h1>
+      <div id="main" >
+        <h1>Search Service</h1>
         <input
           name="text"
           type="text"
@@ -62,11 +60,6 @@ class Search extends Component {
                 <Card style={{height: "140px", maxWidth: "345px" ,border: "1px solid", marginTop: "10px", marginBottom: "10px", display: "block"}}>
       <CardActionArea>
         <CardContent>
-        {/* <CardMedia
-          src=""
-          image=""
-          title="Contemplative Reptile"
-        /> */}
           <Typography gutterBottom variant="h5" component="h2">
             {item.displayLink}
           </Typography>
