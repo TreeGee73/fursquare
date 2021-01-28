@@ -42,7 +42,8 @@ class Search extends Component {
 
   render() {
     return (
-      <div id="main" >
+      
+      <div id="main">
         <h1>Search Service</h1>
         <input
           name="text"
@@ -80,6 +81,7 @@ class Search extends Component {
         ) : (
           <p>You need help! This search is powered by Google</p>
         )}
+      
          
       </div>
     );
