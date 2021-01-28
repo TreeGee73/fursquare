@@ -7,7 +7,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 
+
 class Search extends Component {
+
   state = {
     searchValue: "",
     items: [],
@@ -24,19 +26,31 @@ class Search extends Component {
   makeApiCall = searchInput => {
     var searchUrl = `https://www.googleapis.com/customsearch/v1?key=AIzaSyBKw9foGUzpMEVS0VV_tBxCbkWs1PxQyQk&cx=3142a4046227fd8fe&q=${searchInput}`;
     fetch(searchUrl)
-      .then((response) => {
+      .then(response => {
+
         return response.json();
       })
       .then(jsonData => {
-             this.setState({ 
-            items: jsonData.items, 
+             this.setState({
+            items: jsonData.items,
             searchValue: ""})
            console.log(jsonData)
             console.log(jsonData.items[0])
-        
+
+
+
+
+
       });
-      
+
+
       }
+
+
+
+
+
+
 
   render() {
     return (
@@ -55,8 +69,8 @@ class Search extends Component {
           <div id="items-container">
             {this.state.items.map((item, index) => (
               <div class="single-meal" key={index}>
-                
-                <Card style={{height: "140px", maxWidth: "345px" ,border: "1px solid", marginTop: "10px", marginBottom: "10px", display: "block"}}>
+
+                <Card style={{height: "140px", maxWidth: "345px" ,border: "1px solid", marginTop: "10px", marginBottom: "10px", display: "block", marginLeft: "auto", marginRight: "auto"}}>
       <CardActionArea>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -69,7 +83,7 @@ class Search extends Component {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary"><a href={item.formattedUrl}>Learn More</a>
-          
+
         </Button>
       </CardActions>
     </Card>
@@ -79,8 +93,7 @@ class Search extends Component {
         ) : (
           <p>You need help! This search is powered by Google</p>
         )}
-      
-         
+      <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "/images/login_1.jpg"})`, height: "100vh"}}></div>
       </div>
     );
   }
