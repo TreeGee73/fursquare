@@ -4,6 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const path = require('path');
 
 require('dotenv').config()
 
@@ -34,6 +35,11 @@ mongoose
   .then(() => console.log("MongoDB successfully connected"))
   .catch((err) => console.log(err));
 
+
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+}
+  
 // Start the server and begin listening for client requests.
 app.listen(port, () =>
   // Server log to indicate the server has started
