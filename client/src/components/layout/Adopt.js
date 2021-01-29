@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 
 
-class Profile extends Component {
+class Adopt extends Component {
   render() {
     const { user } = this.props.auth;
   return (
@@ -12,13 +12,13 @@ class Profile extends Component {
       <div
           style={{
             backgroundImage: `url(${
-              `${process.env.PUBLIC_URL}/images/profile.jpg`
+              `${process.env.PUBLIC_URL}/images/adopt.jpg`
             })`,
             height: "150vh",
           }}
         >
         <h1><b>Hey there,{" "}</b>
-          {user.name.split(" ")[0]}!
+          {user.name.split(" ")[0]}!<br></br>Looking for a new FurBaby?
           </h1>
           </div>
       </div>
@@ -26,7 +26,7 @@ class Profile extends Component {
   }
 }
 
-Profile.propTypes = {
+Adopt.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
 };
@@ -38,4 +38,5 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { logoutUser })(Profile);
+export default connect(mapStateToProps, { logoutUser })(Adopt);
+
