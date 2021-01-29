@@ -20,6 +20,11 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 app.use("/api/users", users);
 
+// Serve up static assets
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+}
+
 // DB Config
 const db = process.env.MONGODB_URI;
 
@@ -34,11 +39,6 @@ mongoose
   })
   .then(() => console.log("MongoDB successfully connected"))
   .catch((err) => console.log(err));
-
-
-  if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-}
   
 // Start the server and begin listening for client requests.
 app.listen(port, () =>
