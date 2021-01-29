@@ -5,8 +5,9 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import CardMedia from '@material-ui/core/CardMedia';
 
-
+const { REACT_APP_GOOGLE_API_KEY, REACT_APP_GOOGLE_CX } = process.env;
 
 class Search extends Component {
 
@@ -22,9 +23,10 @@ class Search extends Component {
   handleSearch = () => {
     this.makeApiCall(this.state.searchValue);
   };
-
+  // AIzaSyBKw9foGUzpMEVS0VV_tBxCbkWs1PxQyQk
+  // 3142a4046227fd8fe
   makeApiCall = searchInput => {
-    var searchUrl = `https://www.googleapis.com/customsearch/v1?key=AIzaSyBKw9foGUzpMEVS0VV_tBxCbkWs1PxQyQk&cx=3142a4046227fd8fe&q=${searchInput}`;
+    var searchUrl = `https://customsearch.googleapis.com/customsearch/v1?cx=3142a4046227fd8fe&q=${encodeURI(searchInput)}&key=AIzaSyBKw9foGUzpMEVS0VV_tBxCbkWs1PxQyQk`;
     fetch(searchUrl)
       .then(response => {
 
@@ -35,24 +37,13 @@ class Search extends Component {
             items: jsonData.items,
             searchValue: ""})
            console.log(jsonData)
-            console.log(jsonData.items[0])
-
-
-
-
-
+            console.log(jsonData.items[0].pagemap.cse_image[0].src)
       });
 
 
       }
-
-
-
-
-
-
-
   render() {
+    console.log(process.env)
     return (
       
       <div id="main">
@@ -76,6 +67,12 @@ class Search extends Component {
           <Typography gutterBottom variant="h5" component="h2">
             {item.displayLink}
           </Typography>
+          <CardMedia
+          style={{height: "60px"}}
+          image={(item.pagemap.cse_image || [{src: null}])[0].src}
+          
+        />
+          
           <Typography variant="body2" color="textSecondary" component="p">
             {item.title}
           </Typography>
