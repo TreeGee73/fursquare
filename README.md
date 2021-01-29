@@ -57,16 +57,16 @@ This app utilizes the following technologies:
  - [ReactJS](https://reactjs.org/)
  - [NodeJS](https://nodejs.org/)
  - [socket.io](https://socket.io/) <em>(anticipated)</em>
- - [Material UI](https://material-ui.com/) <em>(anticipated)</em> or [Bootstrap] (https://getbootstrap.com/)
+ - [Material UI](https://material-ui.com/) and [Bootstrap] (https://getbootstrap.com/)
  - [Passport.js](http://www.passportjs.org/) and/or [bcrypt](https://www.npmjs.com/package/bcrypt)
  - [MongoDB-Atlas](https://www.mongodb.com/cloud/atlas)
- - [Heroku](https://www.heroku.com/) or [Netlfy](https://www.netlify.com/) <em>(anticipated)</em> for deployment
+ - [Heroku](https://www.heroku.com/) for deployment
 
 
 ---
 
   ## Installation
-Deployment link: [https://youthful-goodall-6e7a27.netlify.app/](https://youthful-goodall-6e7a27.netlify.app/)
+Deployment link: [https://fursquare.herokuapp.com/](https://fursquare.herokuapp.com/)
 
 ---
 
