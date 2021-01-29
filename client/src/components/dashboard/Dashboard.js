@@ -56,11 +56,11 @@ class Dashboard extends Component {
             <nav id="colorlib-main-menu" role="navigation" className="navbar">
               <div id="navbar" className="collapse">
                 <ul>
-                  {/* <li>
-                    <a href="#profile" data-nav-section="profile">
+                  <li>
+                  <Link to="/dashboard/profile" data-nav-section="profile">
                       Profile
-                    </a>
-                  </li> */}
+                    </Link>
+                  </li>
                   <li>
                   <Link to="/dashboard/pets" data-nav-section="pets">
                       Your Pets
