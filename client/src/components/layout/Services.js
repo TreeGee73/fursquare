@@ -1,7 +1,6 @@
-import React, { Component } from "react";
 
 
-
+import React, { Component } from 'react'
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
@@ -27,7 +26,7 @@ class Search extends Component {
   // AIzaSyBKw9foGUzpMEVS0VV_tBxCbkWs1PxQyQk
   // 3142a4046227fd8fe
   makeApiCall = searchInput => {
-    var searchUrl = `https://customsearch.googleapis.com/customsearch/v1?cx=3142a4046227fd8fe&q=${encodeURI(searchInput)}&key=AIzaSyBKw9foGUzpMEVS0VV_tBxCbkWs1PxQyQk`;
+    var searchUrl = `https://customsearch.googleapis.com/customsearch/v1?cx=3142a4046227fd8fe&q=${encodeURI(searchInput)}&key=AIzaSyBNdHjPySc5rJMVuCz6Hdix1D78YkFcgEI`;
     fetch(searchUrl)
       .then((response) => {
         return response.json();
@@ -46,8 +45,9 @@ class Search extends Component {
     console.log(process.env)
     return (
       
-      <div id="main">
-        <h1>Search Service</h1>
+      <div id="main"
+      >
+        <h1>Search Services</h1>
         <input
           name="text"
           type="text"
@@ -61,17 +61,18 @@ class Search extends Component {
             {this.state.items.map((item, index) => (
               <div class="single-meal" key={index}>
 
-                <Card style={{height: "140px", maxWidth: "345px" ,border: "1px solid", marginTop: "10px", marginBottom: "10px", display: "block", marginLeft: "auto", marginRight: "auto"}}>
+                <Card style={{height: "auto", maxWidth: "345px" ,border: "1px solid", marginTop: "10px", marginBottom: "10px",marginLeft: "10px"}}>
       <CardActionArea>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {item.displayLink}
-          </Typography>
+        <CardContent>   
           <CardMedia
-          style={{height: "60px"}}
+          style={{height: "140px"}}
           image={(item.pagemap.cse_image || [{src: null}])[0].src}
           
         />
+          <Typography gutterBottom variant="h5" component="h2">
+            {item.displayLink}
+          </Typography>
+       
           
           <Typography variant="body2" color="textSecondary" component="p">
             {item.title}
@@ -79,9 +80,9 @@ class Search extends Component {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary"><a href={item.formattedUrl}>Learn More</a>
+        {/* <Button size="small" color="primary"><a href={item.formattedUrl}>Learn More</a>
 
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
               </div>
@@ -95,7 +96,7 @@ class Search extends Component {
             backgroundImage: `url(${
               process.env.PUBLIC_URL + "/images/login_1.jpg"
             })`,
-            height: "150vh",
+            height: "100vh",
           }}
         ></div>
       </div>
