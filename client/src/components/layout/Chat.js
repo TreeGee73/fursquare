@@ -3,22 +3,21 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
 
-
-class Profile extends Component {
-  render() {
+class Chat extends Component {
+  render() {  
     const { user } = this.props.auth;
   return (
     <div id="main">
       <div
           style={{
             backgroundImage: `url(${
-              `${process.env.PUBLIC_URL}/images/profile.jpg`
+              `${process.env.PUBLIC_URL}/images/chat.jpg`
             })`,
             height: "150vh",
           }}
         >
         <h1><b>Hey there,{" "}</b>
-          {user.name.split(" ")[0]}!
+          {user.name.split(" ")[0]}!<br></br>Let's meet someone new!
           </h1>
           </div>
       </div>
@@ -26,7 +25,7 @@ class Profile extends Component {
   }
 }
 
-Profile.propTypes = {
+Chat.propTypes = {
   logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
 };
@@ -38,4 +37,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { logoutUser })(Profile);
+export default connect(mapStateToProps, { logoutUser })(Chat);

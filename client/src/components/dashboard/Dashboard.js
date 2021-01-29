@@ -58,7 +58,7 @@ class Dashboard extends Component {
                 <ul>
                   <li>
                   <Link to="/dashboard/profile" data-nav-section="profile">
-                      Profile
+                      Profile - <em>Coming Soon</em>
                     </Link>
                   </li>
                   <li>
@@ -71,16 +71,16 @@ class Dashboard extends Component {
                       Search Services
                     </Link>
                   </li>
-                  {/* <li>
-                    <a href="#connect" data-nav-section="connect">
-                      Connect with Other Pet People
-                    </a>
-                  </li> */}
-                  {/* <li>
-                    <a href="#adopt" data-nav-section="adopt">
-                      Add a fur baby to your family
-                    </a>
-                  </li> */}
+                  <li>
+                  <Link to="/dashboard/chat" data-nav-section="chat">
+                      Connect with Other Pet People - <em>Coming Soon</em>
+                    </Link>
+                  </li>
+                  <li>
+                  <Link to="/dashboard/adopt" data-nav-section="adopt">
+                      Add a fur baby to your family - <em>Coming Soon</em>
+                    </Link>
+                  </li>
                   <li>
                     <button
                       className="btn btn-large btn-sidebar"
