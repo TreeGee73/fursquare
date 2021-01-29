@@ -48,8 +48,6 @@ class Login extends Component {
 
   render() {
     const { errors } = this.state;
-    // console.log("Hello Steve")
-    // console.log(process.env)
     return (
       <div>
         <div>
