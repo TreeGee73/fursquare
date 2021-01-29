@@ -1,16 +1,17 @@
 import React, { Component } from "react";
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+
+
+
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 import CardMedia from '@material-ui/core/CardMedia';
 
-const { REACT_APP_GOOGLE_API_KEY, REACT_APP_GOOGLE_CX } = process.env;
 
 class Search extends Component {
-
   state = {
     searchValue: "",
     items: [],
@@ -28,20 +29,19 @@ class Search extends Component {
   makeApiCall = searchInput => {
     var searchUrl = `https://customsearch.googleapis.com/customsearch/v1?cx=3142a4046227fd8fe&q=${encodeURI(searchInput)}&key=AIzaSyBKw9foGUzpMEVS0VV_tBxCbkWs1PxQyQk`;
     fetch(searchUrl)
-      .then(response => {
-
+      .then((response) => {
         return response.json();
       })
-      .then(jsonData => {
-             this.setState({
-            items: jsonData.items,
-            searchValue: ""})
-           console.log(jsonData)
-            console.log(jsonData.items[0].pagemap.cse_image[0].src)
+      .then((jsonData) => {
+        this.setState({
+          items: jsonData.items,
+          searchValue: "",
+        });
+        console.log(jsonData);
+        console.log(jsonData.items[0]);
       });
+  };
 
-
-      }
   render() {
     console.log(process.env)
     return (
@@ -90,7 +90,14 @@ class Search extends Component {
         ) : (
           <p>You need help! This search is powered by Google</p>
         )}
-      <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "/images/login_1.jpg"})`, height: "100vh"}}></div>
+        <div
+          style={{
+            backgroundImage: `url(${
+              process.env.PUBLIC_URL + "/images/login_1.jpg"
+            })`,
+            height: "150vh",
+          }}
+        ></div>
       </div>
     );
   }
