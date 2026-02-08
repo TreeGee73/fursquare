@@ -1,76 +1,121 @@
 # FurSquare
 
-![License](https://img.shields.io/badge/License-MIT-blue)<div style="text-align: right">[![Netlify Status](https://api.netlify.com/api/v1/badges/90e34e58-29b4-464e-a812-dfdb74808543/deploy-status)](https://app.netlify.com/sites/hopeful-tesla-b55b30/deploys)</div>
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-<img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> <img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/> <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/> <img src="https://img.shields.io/badge/heroku%20-%23430098.svg?&style=for-the-badge&logo=heroku&logoColor=white"/>
+<img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> <img src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/> <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/> <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
+
+---
+
+## 📚 Educational Project
+
+This project was completed as part of University of Arizona Full-Stack Web Development Bootcamp to demonstrate understanding of: **MERN stack architecture (MongoDB, Express, React, Node.js), user authentication with Passport.js/bcrypt, RESTful API design, React component architecture, state management, responsive design with Material-UI and Bootstrap, and team collaboration using Git workflow**.
+
+**Status:** Archived - No longer under active development  
+**Purpose:** Portfolio demonstration of full-stack MERN application development and team collaboration  
+**Completed:** January 2021
+
+**Team Members:** Brandt Fricker, Theresa Grier, Alan Huynh, and Alex Nieves
+
+---
 
 ## Table of Contents
   * [Description](#description)
+  * [User Story](#user-story)
   * [Usage](#usage)
   * [Technology](#technology)
   * [Installation](#installation)
+  * [Images / Demo Video](#images--demo-video)
   * [License](#license)
-  * [Images / Demo Video](#images-/-demo-video)
-  * [Contributing to This Repo](#contributing-to-this-repo)
-  * [Questions / Contact Details](#questions-/-contact-details)
+  * [Questions / Contact Details](#questions--contact-details)
 
 ---
 
-  ## Description
-This app is for pet owners and thier pets. It is intended to assist pet owners in locating services, connecting with other pet owners, and for all too imporant pet socialization (think dog parks and doggy daycares).
+## Description
+
+This app is for pet owners and their pets. It is intended to assist pet owners in locating services, connecting with other pet owners, and facilitating pet socialization (think dog parks and doggy daycares).
 
 ---
 
-  ## Usage
+## User Story
+
 As a pet owner, I want to find the local dog park(s) and local businesses that offer services I need to care for my pet. I also want to be able to connect with other pet owners or search for a new doggy brother or sister to adopt in the future.
 
-Initial Landing Page
-<br />
-<img src="client\public\images\wireframe1.jpg" />
-<br />
-<br />
-Login Portal
-<br />
-<img src="client\public\images\wireframe2.jpg" />
-<br />
-<br />
-Register Portal
-<br />
-<img src="client\public\images\wireframe3.jpg" />
-<br />
-<br />
-Pet Pictures
-<br />
-<img src="client\public\images\wireframe4.jpg" />
-<br />
-<br />
-Search Page
-<br />
-<img src="client\public\images\wireframe5.jpg" />
+---
+
+## Usage
+
+This is a full-stack MERN application featuring:
+- User authentication and registration
+- Pet profile creation and management
+- Location-based search for pet services (parks, daycares, veterinarians)
+- Social features for connecting with other pet owners
+- Pet photo sharing gallery
+- Responsive design for mobile and desktop use
 
 ---
 
-  ## Technology
-This app utilizes the following technologies:
- - [MongoDB](https://www.mongodb.com/)
- - [Express](https://www.npmjs.com/package/express)
- - [ReactJS](https://reactjs.org/)
- - [NodeJS](https://nodejs.org/)
- - [socket.io](https://socket.io/) <em>(anticipated)</em>
- - [Material UI](https://material-ui.com/) and [Bootstrap] (https://getbootstrap.com/)
- - [Passport.js](http://www.passportjs.org/) and/or [bcrypt](https://www.npmjs.com/package/bcrypt)
- - [MongoDB-Atlas](https://www.mongodb.com/cloud/atlas)
- - [Heroku](https://www.heroku.com/) for deployment
+## Technology
 
+* **CSS** (40.9%) - Custom styling
+* **JavaScript** (38.9%) - Application logic and React components
+* **SCSS** (19.0%) - Advanced styling with preprocessor
+* **HTML** (1.2%) - Structure and interface
+
+### Full Stack Technologies:
+* **MongoDB** - NoSQL database
+* **Express.js** - Backend web framework
+* **React** - Frontend library for UI components
+* **Node.js** - Server-side runtime environment
+* **Passport.js / bcrypt** - User authentication and password hashing
+* **Material-UI** - React component library
+* **Bootstrap** - CSS framework for responsive design
+* **MongoDB Atlas** - Cloud database hosting
+* **Socket.io** - Real-time communication (planned feature)
 
 ---
 
-  ## Installation
-Deployment link: [https://fursquare.herokuapp.com/](https://fursquare.herokuapp.com/)
+## Installation
+
+To run this project locally:
+```bash
+# Clone the repository
+git clone [repository-url]
+
+# Install dependencies
+npm install
+
+# Run the application in development mode
+npm start
+```
+
+**Note:** This project is no longer deployed but can be run locally for demonstration purposes.
 
 ---
 
-  ## License
+## Images / Demo Video
+
+### Initial Landing Page
+<img src="client\public\images\wireframe1.jpg" alt="Landing Page" />
+
+### Login Portal
+<img src="client\public\images\wireframe2.jpg" alt="Login Portal" />
+
+### Register Portal
+<img src="client\public\images\wireframe3.jpg" alt="Register Portal" />
+
+### Pet Pictures Gallery
+<img src="client\public\images\wireframe4.jpg" alt="Pet Pictures" />
+
+### Search Page
+<img src="client\public\images\wireframe5.jpg" alt="Search Page" />
+
+### Application Screenshot
+<img src="client\public\images\screenshot.jpg" alt="Application Screenshot" />
+
+---
+
+## License
+
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
 Copyright (c) 2021; Brandt Fricker, Theresa Grier, Alan Huynh, and Alex Nieves.
@@ -83,23 +128,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 
-  ## Images / Demo Video
-  <!-- A video demonstration of this application can be found [here](https://youtu.be/8QQGD-kPY20).
-  Click the image to launch the video. -->
+## Questions / Contact Details
 
-  <!-- [![Screeshot](screenshot.jpg)](https://www.youtube.com/watch?v=8QQGD-kPY20 "Demo") -->
+### Team Contact Information
 
-  TBA <br />
-<img src="client\public\images\screenshot.jpg" />
+**Theresa Grier**  
+GitHub: [TreeGee73](https://github.com/TreeGee73)  
+
+**Brandt Fricker**  
+GitHub: [brandt-fricker](https://github.com/brandt-fricker)
+
+**Alan Huynh**  
+GitHub: [alanhuynh1021](https://github.com/alanhuynh1021)
+
+**Alex Nieves**  
+GitHub: [ajsnow56](https://github.com/ajsnow56)
 
 ---
 
-  ## Contributing to This Repo
-  To contribute to this project, clone this project repository locally, create a new branch, and install all dependencies using 'npm install'. After modifying the code, verify all edits/changes are clearly commented and submit a push request which includes a summary of the edits. All contributions will be reviewed prior to incorporating them into the repo.
-
----
-
-  ## Questions / Contact Details
-  This app can be found on my Github page at [TreeGee73](https://github.com/TreeGee73).
-
-  If you have any questions or need to contact me about this app, I can reached either on Github or by email at [treegee73@gmail.com](treegee73@gmail.com).
+**Note:** This project was a collaborative team effort demonstrating full MERN stack development including database design, RESTful API implementation, React frontend architecture, and user authentication systems.
